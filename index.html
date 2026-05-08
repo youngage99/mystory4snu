@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <title>길을 묻다 — 선배가 들려주는 진로 이야기</title>
+  <meta name="description" content="응용생명화학전공 선배 초청 세미나 — 정승규 (농화학 89학번, NHN PAYCO 대표이사)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0F2A47;
+      --navy-deep: #081A2D;
+      --slate: #486581;
+      --steel: #627D98;
+      --ice: #E4ECF7;
+      --paper: #FAFBFC;
+      --card-bg: #FFFFFF;
+      --divider: #D9E2EC;
+      --ink: #1F2937;
+      --body: #374151;
+      --muted: #6B7280;
+      --gold: #B8860B;
+      --gold-soft: #D4A437;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans KR', system-ui, sans-serif;
+      background: var(--paper);
+      color: var(--body);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ==================== HERO ==================== */
+    .hero {
+      background: var(--navy);
+      color: var(--paper);
+      padding: 80px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 60px;
+      width: 4px; height: calc(100% - 120px);
+      background: var(--gold);
+    }
+    .hero-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      padding-left: 20px;
+    }
+    .hero-eyebrow {
+      font-size: 13px;
+      letter-spacing: 0.3em;
+      color: var(--gold-soft);
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: clamp(40px, 7vw, 72px);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+    }
+    .hero-sub-en {
+      font-family: 'Noto Serif KR', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: var(--gold-soft);
+      margin-bottom: 6px;
+    }
+    .hero-sub-ko {
+      font-size: 16px;
+      color: var(--divider);
+      margin-bottom: 32px;
+    }
+    .hero-divider {
+      width: 50px;
+      height: 2px;
+      background: var(--gold);
+      margin-bottom: 24px;
+    }
+    .hero-author {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .hero-meta {
+      font-size: 13px;
+      color: var(--divider);
+      letter-spacing: 0.05em;
+      margin-bottom: 40px;
+    }
+    .hero-email {
+      color: var(--gold-soft);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--gold-soft);
+      padding-bottom: 1px;
+      transition: color 0.15s ease;
+    }
+    .hero-email:hover {
+      color: var(--paper);
+      border-bottom-color: var(--paper);
+    }
+    .hero-event {
+      font-size: 12px;
+      color: var(--steel);
+      letter-spacing: 0.1em;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* ==================== DOWNLOAD BAR ==================== */
+    .downloads {
+      background: var(--ice);
+      padding: 24px;
+      border-bottom: 1px solid var(--divider);
+    }
+    .downloads-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .downloads-label {
+      font-size: 13px;
+      color: var(--slate);
+      letter-spacing: 0.1em;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: var(--card-bg);
+      color: var(--navy-deep);
+      text-decoration: none;
+      border: 1px solid var(--divider);
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+    .download-btn:hover {
+      background: var(--navy);
+      color: var(--paper);
+      border-color: var(--navy);
+    }
+    .download-btn svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+    }
+
+    /* ==================== VIEW MODE BAR ==================== */
+    .view-mode-bar {
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--divider);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      background: rgba(250, 251, 252, 0.92);
+    }
+    .view-mode-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .view-mode-label {
+      font-size: 12px;
+      color: var(--slate);
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .view-mode-tabs {
+      display: inline-flex;
+      background: var(--card-bg);
+      border: 1px solid var(--divider);
+      border-radius: 6px;
+      padding: 3px;
+      gap: 2px;
+    }
+    .view-mode-tabs a {
+      padding: 8px 16px;
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .view-mode-tabs a:hover {
+      color: var(--navy-deep);
+    }
+    .view-mode-tabs a.active {
+      background: var(--navy);
+      color: var(--paper);
+    }
+    .view-mode-tabs a svg {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+    }
+
+    /* ==================== INTRO ==================== */
+    .intro {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 40px;
+    }
+    .intro p {
+      font-size: 16px;
+      color: var(--body);
+      margin-bottom: 16px;
+    }
+    .intro p.lead {
+      font-size: 18px;
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    /* ==================== TOC ==================== */
+    .toc {
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 24px;
+      background: var(--card-bg);
+      border: 1px solid var(--divider);
+      border-radius: 8px;
+    }
+    .toc-title {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+    }
+    .toc li {
+      counter-increment: toc;
+      padding: 8px 0;
+      border-bottom: 1px dashed var(--divider);
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .toc li:last-child { border-bottom: none; }
+    .toc li::before {
+      content: counter(toc, decimal-leading-zero);
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 13px;
+      min-width: 24px;
+    }
+    .toc a {
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 15px;
+      flex: 1;
+    }
+    .toc a:hover { color: var(--navy); text-decoration: underline; }
+    .toc .toc-section {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* ==================== SLIDE BLOCKS ==================== */
+    .content {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .slide-block {
+      margin-bottom: 56px;
+      scroll-margin-top: 24px;
+    }
+    .slide-img-wrap {
+      position: relative;
+      background: var(--card-bg);
+      border: 1px solid var(--divider);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(15, 42, 71, 0.06);
+    }
+    .slide-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .slide-num {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--navy);
+      color: var(--gold-soft);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      padding: 6px 12px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+    .slide-narration {
+      margin-top: 20px;
+      padding: 24px 28px;
+      background: var(--card-bg);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 6px 6px 0;
+    }
+    /* index.html (슬라이드만 보기): narration 영역 자체를 숨김 */
+    body.slides-only .slide-narration {
+      display: none;
+    }
+    .narration-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--slate);
+      font-weight: 600;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .slide-narration p {
+      font-size: 15px;
+      color: var(--body);
+      margin-bottom: 12px;
+    }
+    .slide-narration p:last-child { margin-bottom: 0; }
+    .slide-narration .em {
+      color: var(--navy);
+      font-weight: 500;
+    }
+    .slide-narration blockquote {
+      margin: 16px 0;
+      padding: 12px 18px;
+      background: var(--ice);
+      border-left: 3px solid var(--slate);
+      font-family: 'Noto Serif KR', serif;
+      font-style: italic;
+      color: var(--ink);
+      font-size: 15px;
+    }
+
+    /* ==================== CHAPTER SEPARATOR ==================== */
+    .chapter-mark {
+      max-width: 1080px;
+      margin: 32px auto 0;
+      padding: 32px 24px 0;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .chapter-mark::before, .chapter-mark::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--divider);
+    }
+    .chapter-label {
+      font-size: 12px;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* ==================== FOOTER ==================== */
+    .footer {
+      background: var(--navy);
+      color: var(--divider);
+      padding: 60px 24px;
+      text-align: center;
+    }
+    .footer-inner { max-width: 720px; margin: 0 auto; }
+    .footer-quote {
+      font-family: 'Noto Serif KR', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: var(--gold-soft);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .footer-meta {
+      font-size: 13px;
+      color: var(--steel);
+      letter-spacing: 0.05em;
+    }
+
+    /* ==================== TOP NAV ==================== */
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 44px;
+      height: 44px;
+      background: var(--navy);
+      color: var(--gold-soft);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 18px;
+      box-shadow: 0 4px 12px rgba(15, 42, 71, 0.2);
+      opacity: 0;
+      transition: opacity 0.2s;
+      z-index: 100;
+    }
+    .back-to-top.visible { opacity: 1; }
+    .back-to-top:hover { background: var(--navy-deep); }
+
+    /* ==================== RESPONSIVE ==================== */
+    @media (max-width: 640px) {
+      .hero { padding: 60px 20px 40px; }
+      .hero-inner { padding-left: 16px; }
+      .intro, .toc, .content { padding-left: 20px; padding-right: 20px; }
+      .slide-narration { padding: 20px; }
+      .downloads-inner { padding: 0 4px; }
+    }
+  </style>
+</head>
+<body class="slides-only">
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">응용생명화학전공  |  선배 초청 세미나</div>
+    <h1>길을 묻다</h1>
+    <div class="hero-sub-en">Asking the Way</div>
+    <div class="hero-sub-ko">선배가 들려주는 진로 이야기</div>
+    <div class="hero-divider"></div>
+    <div class="hero-author">정승규</div>
+    <div class="hero-meta">농화학 89학번 · NHN PAYCO 대표이사 · NHN KCP COO · <a href="mailto:jsk1@nhnpayco.com" class="hero-email">jsk1@nhnpayco.com</a></div>
+    <div class="hero-event">2026. 05. 07  |  서울대학교 농업생명과학대학</div>
+  </div>
+</header>
+
+<!-- ============ DOWNLOADS ============ -->
+<section class="downloads">
+  <div class="downloads-inner">
+    <span class="downloads-label">DOWNLOADS</span>
+    <a class="download-btn" href="./downloads/presentation.pptx" download="길을_묻다_발표자료_정승규.pptx">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      발표자료 (PPTX)
+    </a>
+    <a class="download-btn" href="./downloads/manuscript.pdf" download="길을_묻다_발표원고_정승규.pdf">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      발표 원고 (PDF)
+    </a>
+  </div>
+</section>
+
+<!-- ============ VIEW MODE BAR ============ -->
+<section class="view-mode-bar">
+  <div class="view-mode-inner">
+    <span class="view-mode-label">보기 모드</span>
+    <nav class="view-mode-tabs" aria-label="보기 모드 선택">
+      <a href="./index.html" class="active" aria-current="page">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        슬라이드만 보기
+      </a>
+      <a href="./with-script.html">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="8" rx="1.5"/><line x1="3" y1="14" x2="21" y2="14"/><line x1="3" y1="17" x2="18" y2="17"/><line x1="3" y1="20" x2="15" y2="20"/></svg>
+        스크립트 같이 보기
+      </a>
+    </nav>
+  </div>
+</section>
+
+<!-- ============ INTRO ============ -->
+<section class="intro">
+  <p class="lead">전공과는 다른 직업을 선택한 졸업생이 30년의 직장생활을 거치며 보고 듣고 느낀 이야기를, 후배들 앞에서 나눈 강연의 기록입니다.</p>
+  <p>거창한 성공담이 아닙니다. 진로를 두고 흔들리고, 결정하고, 후회하고, 다시 선택해 온 이야기를 담담하게 풀어냈습니다. 강연을 들으셨던 후배들이 다시 보거나, 그날 함께하지 못한 분들이 천천히 읽어보실 수 있도록 슬라이드와 함께 강연 내용을 정리했습니다.</p>
+</section>
+
+<!-- ============ TOC ============ -->
+<nav class="toc">
+  <div class="toc-title">CONTENTS</div>
+  <ol>
+    <li><span class="toc-section">OPENING</span><a href="#s2">여는 말</a></li>
+    <li><span class="toc-section">AGENDA</span><a href="#s3">오늘의 흐름</a></li>
+    <li><span class="toc-section">CHAPTER 01</span><a href="#s4">흔들리던 20대</a></li>
+    <li><span class="toc-section">CHAPTER 02</span><a href="#s8">일곱 명짜리 회사에서</a></li>
+    <li><span class="toc-section">CHAPTER 03</span><a href="#s12">30대 중반의 흔들림</a></li>
+    <li><span class="toc-section">CHAPTER 04</span><a href="#s15">위기와 결실</a></li>
+    <li><span class="toc-section">FOR YOU</span><a href="#s18">후배들에게 — 네 가지 부탁</a></li>
+    <li><span class="toc-section">CLOSING</span><a href="#s19">닫는 말</a></li>
+    <li><span class="toc-section">FINAL THOUGHT</span><a href="#s20">얘기 들어 줄 수 있는 친구</a></li>
+  </ol>
+</nav>
+
+<!-- ============ SLIDE BLOCKS ============ -->
+<main class="content">
+
+  <!-- Slide 1 -->
+  <article class="slide-block" id="s1">
+    <div class="slide-img-wrap">
+      <span class="slide-num">01 / 20</span>
+      <img src="./slides/slide-01.jpg" alt="표지">
+    </div>
+  </article>
+
+  <!-- Slide 2 -->
+  <article class="slide-block" id="s2">
+    <div class="slide-img-wrap">
+      <span class="slide-num">02 / 20</span>
+      <img src="./slides/slide-02.jpg" alt="여는 말">
+    </div>
+    <div class="slide-narration">
+      <div class="narration-label">— 여는 말</div>
+      <p>안녕하세요. 농화학과 89학번 정승규입니다.</p>
+      <p>오늘 이 자리에 초대 받으면서 사실 좀 머쓱했습니다. 제가 후배 여러분께 진로 이야기를 들려주기에 적합한 지 해서요. 앞서 보시다시피 저는 우리 학과 전공과는 다른 진로를 선택한 사람이거든요. 농화학과를 나와서 IT 회사에 들어갔고, 지금은 NHN PAYCO라는 간편결제회사 대표 겸 NHN KCP라는 온오프라인 전자결제 회사의 COO를 겸직하고 있습니다.</p>
+      <p>그런데 가만히 생각해 보니, 어쩌면 그래서 오늘 제가 드릴 수 있는 이야기가 조금은 있을 것도 같습니다. <span class="em">"전공과는 다른 직업을 선택한 졸업생"</span>이 확고한 비전, 계획이 있었던 게 아닌, 직업과 진로를 고민하고 흔들리고, 결정하고 때론 후회도 하고 선택하면서 30년의 직장생활을 어떻게 해왔는 지 — 그런 이야기가 여러분 중 누군가에게는 작은 위로나 힌트가 될 수 있지 않을까 하는 마음으로 이 자리에 섰습니다.</p>
+    </div>
+  </article>
+
+  <!-- Slide 3 -->
+  <article class="slide-block" id="s3">
+    <div class="slide-img-wrap">
+      <span class="slide-num">03 / 20</span>
+      <img src="./slides/slide-03.jpg" alt="오늘의 흐름">
+    </div>
+    <div class="slide-narration">
+      <div class="narration-label">— 오늘의 흐름</div>
+      <p>오늘은 네 개의 장면으로 30년을 풀어드리고, 마지막에 후배 여러분께 드리는 작은 부탁 네 가지로 마무리하겠습니다.</p>
+    </div>
+  </article>
+
+  <!-- Chapter 1 mark -->
+  <div class="chapter-mark"><span class="chapter-label">CHAPTER 01  ·  흔들리던 20대</span></div>
+
+  <!-- Slide 4 -->
+  <article class="slide-block" id="s4">
+    <div class="slide-img-wrap">
+      <span class="slide-num">04 / 20</span>
+      <img src="./slides/slide-04.jpg" alt="장면 1 - 흔들리던 20대">
+    </div>
+  </article>
+
+  <!-- Slide 5 -->
+  <article class="slide-block" id="s5">
+    <div class="slide-img-wrap">
+      <span class="slide-num">05 / 20</span>
+      <img src="./slides/slide-05.jpg" alt="백팩에 책만 넣고 다니던 시절">
+    </div>
+    <div class="slide-narration">
+      <div class="narration-label">— 1989 ~ 1993, 1·2학년 시절</div>
+      <p>저는 사실 학교 다닐 때 모범생과는 거리가 먼 타입이었습니다. 1, 2학년 때는 친구들과 술자리, 미팅 자리만 즐겨 하면서 시간을 보냈고, 3학년 1학기까지는 학과 공부를 거의 하지 않았던 셈이에요.</p>
+      <p>그러면서도 당시 이과에서 안정적·전문적 진로로서 기술행정고시, 변리사시험 등을 생각해 보기도 했습니다. 그냥 민법책, 특허법책 한 권씩 사서 백팩에 넣고만 다녔어요. 토플책하고. 정작 시작은 전혀 안 하고 걱정만 하던.</p>
+      <p>그러다가 3학년 여름방학 즈음에 <span class="em">"이대로는 안 되겠다, 그냥 군대 가기도 싫고 하니 대학원에 가야겠다"</span> 싶어서 그제서야 부족한 과목들을 재수강하고 학점을 끌어올리기 시작했습니다.</p>
+    </div>
+  </article>
+
+  <!-- Slide 6 -->
+  <article class="slide-block" id="s6">
+    <div class="slide-img-wrap">
+      <span class="slide-num">06 / 20</span>
+      <img src="./slides/slide-06.jpg" alt="흔들림은 계속됐습니다">
+    </div>
+    <div class="slide-narration">
+      <div class="narration-label">— 1991 ~ 1996, 4학년부터 군 복무까지</div>
+      <p>4학년 때는 우리 과 생화학실 대학원 진학을 준비했어요. 그런데 뒤늦게 마음먹다 보니 과 TO는 이미 다른 동기들이 다 차 있더라고요. 그래서 당시 협동과정 TO로라도 생화학실에 들어가 보려고, 실험실에서 와싱이며 센트리퓨지며 그런 것까지 도와가면서 준비했었습니다.</p>
+      <p>그런데 4학년 2학기에 와서 또 마음이 흔들렸어요. <span class="em">"과연 연구자로서의 직업이 나한테 잘 맞을까?"</span> 하는, 본격적인 "진로 고민"의 시작이었죠. 그때 마침 새로 생겼던 환경기사 시험을 통해 병역특례로 군대를 대체하자 — 그렇게 마음을 바꿨습니다.</p>
+      <p>1차 시험에 합격하고 2차 시험까지 치른 후, 당연히 붙겠지 싶어서 병역특례 업체에 가서 면접까지 보고 출근 날짜도 잡아뒀어요. 그런데 어이없게도 2차 시험에서 떨어졌습니다. 그 길도 거기서 좌절됐죠. 결국 대학원 진학을 포기하고 공군 학사장교로 지원해서 — 국내 최장 기간이라는 40개월을 복무했습니다.</p>
+    </div>
+  </article>
+
+  <!-- Slide 7 -->
+  <article class="slide-block" id="s7">
+    <div class="slide-img-wrap">
+      <span class="slide-num">07 / 20</span>
+      <img src="./slides/slide-07.jpg" alt="취업했더니, 또 흔들렸습니다">
+    </div>
+    <div class="slide-narration">
+      <div class="narration-label">— 1996 ~ 1999, 입사 후의 흔들림</div>
+      <p>군 제대 시기에 국내 대기업 여러 곳에 지원했고, 1996년 봄에 IT업체 3군데, 삼성그룹공채, 증권사 등 5~6 여 곳에 원서를 접수했는데, 그 중 LG-CNS 한 곳만 합격하게 되었죠. 당시에 저로서는 감지덕지라고 생각했습니다.</p>
+      <p>그런데 사람이 참 간사한 게, 입사 전에는 그저 "입사만 되면 좋겠다"고 생각했는데, 막상 입사하고 나니 <span class="em">"이 길이 정말 맞는 걸까? 내가 대기업의 부품처럼 되는 건 아닐까?"</span> 이런 고민이 들기 시작했습니다. 배가 부르게 된 거죠.</p>
+      <p>저랑 가장 가까웠던 LG 입사 동기 한 명이 — 서울대 철학과 89학번이었어요 — 입사한 지 1년 만에 회사를 그만두고 수능시험을 다시 준비하기 시작하더라고요. 그걸 옆에서 보면서 저도 흔들렸습니다. 한의대에 다시 들어가야 하나 진지하게 고민하다가, 정말로 수능 원서를 쓰려고 졸업한 고등학교를 찾아간 적도 있어요. 그런데 그날 마침 담임 선생님이 안 계셨습니다. 차마 "원서 쓰러 왔다"는 말을 다른 선생님께는 못 꺼내겠더라고요. 그냥 돌아왔습니다.</p>
+      <p>그렇게 계속 진로 고민만 하다가, 1998년 1월에 직장 사수와 함께 동반 퇴사해서 IT 개발 회사를 창업했습니다. 그러면서 제 인생도 좀 바뀌었어요. 그 전까지 제가 밤을 새우는 건 술 마시고 얘기하면서 새우는 거였는데, 이제는 일하면서, 코딩하면서 밤을 새우게 됐습니다. 알코홀릭에서 워크홀릭으로 변신했다고나 할까요.</p>
+      <p>두 명이서 창업한 회사는 마치 동아리 같았습니다. 정말 재미있었어요. 그런데 문제는 — 먹고사는 게 안 됐습니다. 직원도 4~5명까지 늘어나면서 직원들 월급주는 것도 벅찼습니다. 결혼을 하기로 마음먹고 가장으로서 책임져야 하는 상황이 되어서, 동업하던 선배님께는 죄송했지만 창업한 회사를 퇴사해서 KCP라는 스타트업에 합류하게 되었습니다.</p>
+    </div>
+  </article>
+
+  <!-- Chapter 2 mark -->
+  <div class="chapter-mark"><span class="chapter-label">CHAPTER 02  ·  일곱 명짜리 회사에서</span></div>
+
+  <!-- Slide 8 -->
+  <article class="slide-block" id="s8">
+    <div class="slide-img-wrap">
+      <span class="slide-num">08 / 20</span>
+      <img src="./slides/slide-08.jpg" alt="장면 2 - 일곱 명짜리 회사에서">
+    </div>
+  </article>
+
+  <!-- Slide 9 -->
+  <article class="slide-block" id="s9">
+    <div class="slide-img-wrap">
+      <span class="slide-num">09 / 20</span>
+      <img src="./slides/slide-09.jpg" alt="첫 매출 5,500원">
+    </div>
+    <div class="slide-narration">
+      <div class="narration-label">— 2000년 5월, 첫 매출</div>
+      <p>1999년 11월, KCP에 입사했을 때 임직원은 일곱 명이었고, 사실상 개점휴업 상태였습니다. 인터넷 전자결제 서비스를 개발·준비 중이었고, 제가 첫 번째로 한 일이 연간 사업계획을 작성하는 일이었습니다.</p>
+      <p>회사소개서, 제안서, 계약서도 처음으로 만들고, 낮에는 고객사에 가서 영업하고, 오후 5시쯤 회사에 돌아오면 밤에는 개발을 했습니다. 작은 회사에서는 한 사람이 여러 역할을 해야 하는 상황이었죠.</p>
+      <p>그렇게 서비스를 오픈하고, 첫 번째 고객과 계약하고 2000년 5월에 드디어 우리 회사의 첫 매출이 발생했습니다. <span class="em">5,500원이었어요. 부가세 포함 5,500원.</span> 그 종이 세금계산서를 제 손으로 직접 작성해서 발행했습니다.</p>
+    </div>
+  </article>
+
+  <!-- Slide 10 -->
+  <article class="slide-block" id="s10">
+    <div class="slide-img-wrap">
+      <span class="slide-num">10 / 20</span>
+      <img src="./slides/slide-10.jpg" alt="회사가 망할 뻔했습니다">
+    </div>
+    <div class="slide-narration">
+      <div class="narration-label">— 성장, 그리고 위기</div>
+      <p>그렇게 시작한 회사는 당시 인터넷과 전자상거래의 폭발적인 성장과 함께 크게 성장해 갔습니다. 실적이 매월 두 자릿수 씩 늘어 갔죠.</p>
+      <p>그러나 좋은 상황이 그리 오래 가진 못하더라고요. 당시 전자상거래가 크게 늘어나면서 제도가 아직 정착되지 못한 상황이다 보니 온라인 신용카드 결제 사기가 늘어나게 된 겁니다. 상거래업자가 결제만 받아 놓고 배송·서비스를 이행하지 않고 사기를 치고 도망가거나 도산하면서, 그 소비자 손실을 한꺼번에 우리회사가 안게 된 상황이 발생했습니다. 최근의 티몬·위메프 상황과 비슷한 거죠.</p>
+      <blockquote>당시 회사가 가진 현금이 70억 원 정도였는데, 취소민원액이 120억 원이 넘었습니다. 회사가 망할 상황이었죠.</blockquote>
+      <p>그 당시 사장님의 노력과 해결책으로 간신히 회사는 50억 원 선에서 손실을 처리할 수 있었습니다. 내상을 크게 입은 우리 회사는 자구책의 일환으로 당시 우리보다 좀 더 규모가 큰 동종 경쟁사와 합병을 추진하게 됩니다.</p>
+    </div>
+  </article>
+
+  <!-- Slide 11 -->
+  <article class="slide-block" id="s11">
+    <div class="slide-img-wrap">
+      <span class="slide-num">11 / 20</span>
+      <img src="./slides/slide-11.jpg" alt="배움의 도구">
+    </div>
+    <div class="slide-narration">
+      <div class="narration-label">— 절실함과 학습</div>
+      <p>합병 후 인력도 늘었고, 한 사람이 여러 일을 다 맡던 시기를 지나서, 업무별로 경력자들이 많이 구성되었고 체계가 분화되어 갔습니다. 그 변화 속에서, 저는 또 한 번 진로 고민이 생겼습니다. 개발도 저보다 잘하는 전문가들이 채워지고, 영업도 경력자들이 많게 되다 보니, 그 사이에서 제 영역이 점점 애매해지는 상황이 된 거예요.</p>
+      <p>그래서 자의 반 타의 반으로, 회사 안에서 제 역할이 인사와 재무를 포함한 경영 관리 업무로 바뀌게 됐습니다. 그리고 여기서 제가 정말 절실한 상황에 이르게 됩니다. 농화학과를 나온 사람이 회계를 알 리가 없죠. 그런데 당장 다음 주부터 그 일을 해야 하는 상황이었습니다.</p>
+      <p>그래서 종로의 한 학원을 찾아갔습니다. 그곳은 여상 2-3학년 학생들이 졸업 전에 자격증을 따러 다니는 학원이었습니다. 저는 그때 30대 중반이었어요. 30대 중반의 회사 간부가, 열여덟 열아홉 살 여학생들 사이에 앉아서 저녁마다 4주간 수업을 들었습니다. 솔직히 처음에는 좀 머쓱했습니다. 그런데 신기한 게, 정말 절실하니까 그게 부끄럽지가 않더라고요. 다음 날 출근해서 바로 써야 하는 지식이었으니까요.</p>
+      <p><span class="em">교육은 절실할 때 가장 효과가 큽니다.</span> 학교에서 배울 때처럼 "언젠가 쓰겠지" 하고 듣는 거랑, "내일 당장 써야 한다" 하고 듣는 건 완전히 다른 학습이더라고요.</p>
+      <p>인사 업무는 또 사정이 달랐습니다. 마땅한 교육 과정을 못 찾아서 주말에 교보문고에 가서 인사 관련 고전 두 권, 그 당시 유행하던 이론 두 권 — 그렇게 네 권을 사서 읽었습니다. 솔직히 다 읽고 나서도 뭔가 마뜩지는 않더라고요. 그런데 가만히 생각해 보니, 인사라는 게 원래 다들 잘 모르는 영역이지 않습니까. 그래서 "이 정도면 그래도 중간은 가겠다" 싶었습니다.</p>
+      <p>여러분 지금 생물, 화학 등을 공부하고 계시죠. 그 전공 지식이 평생 여러분의 무기가 될 수도 있고, 어느 순간 전혀 다른 분야로 가게 될 수도 있습니다. 어느 쪽이든 좋습니다. 다만 한 가지 — 자기 분야 바깥의 것을 배워야 할 때, 자존심이나 체면이 발목을 잡지 않도록 하세요.</p>
+    </div>
+  </article>
+
+  <!-- Chapter 3 mark -->
+  <div class="chapter-mark"><span class="chapter-label">CHAPTER 03  ·  30대 중반의 흔들림</span></div>
+
+  <!-- Slide 12 -->
+  <article class="slide-block" id="s12">
+    <div class="slide-img-wrap">
+      <span class="slide-num">12 / 20</span>
+      <img src="./slides/slide-12.jpg" alt="장면 3 - 30대 중반의 흔들림">
+    </div>
+  </article>
+
+  <!-- Slide 13 -->
+  <article class="slide-block" id="s13">
+    <div class="slide-img-wrap">
+      <span class="slide-num">13 / 20</span>
+      <img src="./slides/slide-13.jpg" alt="회피 vs 해결">
+    </div>
+    <div class="slide-narration">
+      <div class="narration-label">— 회피가 아닌 해결을 선택</div>
+      <p>회사는 합병을 한 이후, 두 회사 출신의 조직이 섞여 있었습니다. 그러다 보니 사내 정치가 극심했고, 임원진 중 상당수가 자신들의 단기적 이익을 추구하려고 했어요. 그러다 보니 경영 관리를 맡고 있던 저를 눈엣가시처럼 여기게 됐고, 저를 내보내려고 지속적으로 시도했고, 저는 많은 스트레스를 받았습니다.</p>
+      <p>그때 저는 "이 회사를 나가야 하나, 아예 다른 업종으로 옮겨야 하나" 진지하게 고민했습니다. 그 당시 연봉을 많이 준다고 소문난 외국계 보험사에 면접까지 보러 갔었어요.</p>
+      <p>그러한 고민 결과 저는 남기로 결정했습니다. <span class="em">"이 상황을, 이 문제를 회피하지 말고 정면으로 풀어보자. 찾아보면 방법이 있을 거다."</span> 그런 마음이 들었어요. "이것은 내가 솔루션을 찾을 수 있는 상황이다." 이렇게 보기로 한 겁니다.</p>
+      <blockquote>"문제가 생기면 해결에 방점을 두자. 과거를 탓해봐야 소용없다."<br>"문제 해결에는 끈기가 핵심이다. 궁하면 통한다."</blockquote>
+      <p>막혔다고 생각한 일도, 포기하지 않고 계속 두드리다 보면 어느 순간 길이 보이더라고요. 외부에 답을 구하기보다는, 스스로 공부하고 부딪혀가면서 길을 찾으려는 자세.</p>
+    </div>
+  </article>
+
+  <!-- Slide 14 -->
+  <article class="slide-block" id="s14">
+    <div class="slide-img-wrap">
+      <span class="slide-num">14 / 20</span>
+      <img src="./slides/slide-14.jpg" alt="그래서 어떻게 됐냐고요?">
+    </div>
+    <div class="slide-narration">
+      <div class="narration-label">— 결과</div>
+      <p>그래서 어떻게 됐냐고요? 이런 자세로 2년여간에 걸쳐 저를 내보내려 했던 저보다 상위 임원 3명이 회사를 나가게 되었습니다. <span class="em">한 명씩 one by one.</span></p>
+      <p>만약 그때 제가 회사를 나갔다면, 현재의 저는 없었을 겁니다. 그리고 우리 회사도 없었거나, 지금과는 많이 다른 모습이 되어 있었을 거예요.</p>
+      <p>후배 여러분께도 말씀드리고 싶습니다. 살다 보면 "이 자리에서 더는 못 견디겠다" 싶은 순간이 옵니다. 그럴 때 너무 성급하게 짐을 싸지 마세요. 정말로 옮겨야 할 자리도 있지만, 많은 경우 그 순간을 한 번 더 생각해 보고 — <span class="em">"이게 회피해야 할 상황인가? 아니면 내가 문제를 해결할 수 있는 상황인가?"</span> — 이렇게 자문해 보시기 바랍니다.</p>
+      <p>그렇게 한 번, 두 번 부딪혀 가다 보면, 여러분의 문제 해결 능력이, 그러니까 그런 체력이 점점 강화될 겁니다.</p>
+    </div>
+  </article>
+
+  <!-- Chapter 4 mark -->
+  <div class="chapter-mark"><span class="chapter-label">CHAPTER 04  ·  위기와 결실</span></div>
+
+  <!-- Slide 15 -->
+  <article class="slide-block" id="s15">
+    <div class="slide-img-wrap">
+      <span class="slide-num">15 / 20</span>
+      <img src="./slides/slide-15.jpg" alt="장면 4 - 위기와 결실">
+    </div>
+  </article>
+
+  <!-- Slide 16 -->
+  <article class="slide-block" id="s16">
+    <div class="slide-img-wrap">
+      <span class="slide-num">16 / 20</span>
+      <img src="./slides/slide-16.jpg" alt="2년의 싸움, 그리고 결실">
+    </div>
+    <div class="slide-narration">
+      <div class="narration-label">— 2008 ~ 현재, 위기에서 결실로</div>
+      <p>2008년에서 2009년 사이, 우리 회사는 외부로부터 적대적 M&A 공격을 받았습니다. 믿었던 외부 조력자가 저를 포함한 경영진을 기망하고 사기를 감행하면서, 회사를 통째로 가져가려는 시도였어요.</p>
+      <p>상대는 만만한 사람이 아니었습니다. 서울법대 출신으로, 변호사를 여럿 거느린 로펌의 대표였어요. 법률적으로도, 자본으로도 파상공격이 들어왔고, 우리 경영진은 회사를 통째로 뺏길 위기에 몰렸습니다.</p>
+      <p>그때 저를 포함한 경영진이 그 공격을 방어하기 위해서 직접 회사 지분을 인수해서 우리 지분을 점차 확대해 나갔습니다. 그런데 이게 사실 — 일이 잘못되면 개인적으로 파산할 수도 있는 선택이었어요. 집도 잃고, 말 그대로 길거리에 나앉을 수도 있는 결정이었습니다.</p>
+      <p>그렇게 2년여 동안 싸웠습니다. 결국 우리는 적대적 M&A를 막아내는 데 성공했고, 그 과정에서 우리 경영진은 결과적으로 MBO(Management Buy-Out)를 통해 — 전문경영진에서 회사의 최대주주가 됐습니다.</p>
+      <p><span class="em">저는 이때의 일이, 위기를 기회로 만든 결정적인 "진로 선택"이자, 중대한 "문제 상황을 해결"해 낸 과정의 결실이었다고 생각합니다.</span></p>
+      <p>그 이후 사업은 탄탄한 성장을 거듭했고, 2015년경에 NHN 그룹에 피인수되었습니다. 그룹과의 시너지를 통해 온라인 결제 시장에서 확고한 1위를 차지하게 되었고, 회사로서도 지속적인 발전을 이어가게 됐고, 경영진도 그동안의 노력에 대한 적정한 보상을 얻게 되는 결실이 있었습니다.</p>
+    </div>
+  </article>
+
+  <!-- Slide 17 -->
+  <article class="slide-block" id="s17">
+    <div class="slide-img-wrap">
+      <span class="slide-num">17 / 20</span>
+      <img src="./slides/slide-17.jpg" alt="1999년의 저는, 이런 일이 일어날 거라고 상상하지 못했습니다">
+    </div>
+    <div class="slide-narration">
+      <div class="narration-label">— 돌이켜보면</div>
+      <p>이 이야기를 자랑하려고 꺼낸 게 아닙니다.</p>
+      <p>7명짜리 작은 회사에 들어갔던 1999년의 저는, 26년 후 이런 일들이 일어날 거라고 당시에는 전혀 상상하지 못했습니다. 입사할 때 "전자상거래, 전자결제가 앞으로 유망할 것이다"라는 정도의 생각은 있었어요. 그런데 솔직히 말씀드리면, <span class="em">5년, 10년 뒤를 내다보는 시야 같은 건 없었습니다.</span> 그게 진실이에요.</p>
+      <p>회사 일이라는 건 막상 들어가 보면 정말 구체적이고 사소한 일의 연속이었습니다. 저는 그때 그저 당면한 일들을 하나씩 배워가고, 수행하고, 또 다음 일로 넘어가는 과정을 반복했을 뿐이에요.</p>
+      <p>외국 개발 케이스를 벤치마킹하면서 우리에 맞게 프로그램을 코딩하고, 영업에 필요한 제안서와 계약서를 인터넷을 찾아가며 만들었고, 회계가 필요하면 회계 학원을 갔고, 인사 지식이 필요하면 서점에 갔습니다. 그리고 문제 상황이 발생하면 고민하면서 해결책을 찾아갔습니다.</p>
+      <p>긴 시간을 두고 보면, 그렇게 쌓인 작은 선택들이 결국 어딘가로 데려다줍니다. 처음부터 "10년 후에 이걸 하겠다" 같은 거창한 계획이 있어서가 아니라, <span class="em">그날그날 마주한 문제에 끈기 있게 답하다 보니</span> 여기까지 온 것 같아요.</p>
+      <blockquote>진로 고민은 20대만 하는 게 아닙니다. 평생 하는 것 같습니다.</blockquote>
+      <p>저는 여러분 나이에 진로 고민을 했고, 30대에도 했고, 40대에도 했고, 솔직히 지금도 합니다. 그래서 지금 진로가 안 보인다고, 흔들린다고 너무 자책하지 마세요. 그건 여러분이 부족해서가 아니라, 그냥 사람이 살아가는 자연스러운 모습입니다.</p>
+    </div>
+  </article>
+
+  <!-- Slide 18 -->
+  <article class="slide-block" id="s18">
+    <div class="slide-img-wrap">
+      <span class="slide-num">18 / 20</span>
+      <img src="./slides/slide-18.jpg" alt="후배들에게 — 네 가지 부탁">
+    </div>
+    <div class="slide-narration">
+      <div class="narration-label">— 후배들에게</div>
+      <p>이제 정리하면서, 후배 여러분께 네 가지를 말씀드리고 싶습니다. 거창한 인생 교훈이 아니라, 30년을 살아본 선배의 작은 부탁이라고 생각해 주세요.</p>
+      <p><span class="em">첫째, 진로 고민이 안 끝난다고 자책하지 마세요.</span> 그건 평생 하는 겁니다. 다만 한번 선택했다면, 일정 기간은 끈기 있게 문제를 해결하려 노력해 보세요.</p>
+      <p><span class="em">둘째, 오픈 마인드로 자기 영역을 넓혀가세요.</span> 절실할 때 배우는 게 가장 빨리, 가장 깊이 들어옵니다.</p>
+      <p><span class="em">셋째, 문제가 생기면 과거를 탓하지 말고 해결에 집중하세요.</span> 외부에 답을 구하기 전에, 스스로 부딪혀 보세요.</p>
+      <p><span class="em">넷째, 궁하면 통합니다.</span> 막혀 보이는 일도 끈기 있게 두드리면 길이 열립니다.</p>
+    </div>
+  </article>
+
+  <!-- Slide 19 -->
+  <article class="slide-block" id="s19">
+    <div class="slide-img-wrap">
+      <span class="slide-num">19 / 20</span>
+      <img src="./slides/slide-19.jpg" alt="닫는 말">
+    </div>
+    <div class="slide-narration">
+      <div class="narration-label">— 닫는 말</div>
+      <p>저는 우리 학과 전공과는 다른 진로를 선택한 사람입니다. 한때는 그게 마음에 걸리기도 했어요. 서울대씩이나 나와서 전공과는 다른 직업을 선택한 게 일종의 패배 같기도 하고, 우리 전공에 대해 미안한 마음도 들고요.</p>
+      <p>그런데 지금 돌아보면 — 학교에서 보낸 그 4년이 그냥 사라진 게 아니더라고요.</p>
+      <p>예를 들면 이런 게 있어요. 제가 3학년 여름방학 무렵부터 대학원 진학을 마음먹고, 그동안 부족했던 과목들을 한 학기와 여름 계절학기에 몰아서 들었던 시기가 있었습니다. 생화학, 미생물학, 분자생물학, 세포생물학 — 이런 과목들을 거의 동시에 파고들었어요. 그때 처음으로 <span class="em">"아, 이제 뭔가 좀 알 것 같다", "그림이 보인다"</span> 하는 느낌이 들었습니다.</p>
+      <p>지금 돌아보면, 그때의 그 느낌이 — 회사에 들어가서 일에 푹 빠져 있을 때 느끼는 감각과 굉장히 비슷하더라고요. 분야는 전혀 달랐는데, 뭔가에 깊이 들어갔을 때 머릿속에서 그림이 그려지는 그 경험은 똑같았던 거죠. 학과 공부에서 그런 몰입의 감각을 한번 맛본 게 — 나중에 일에 빠져드는 감각의 사전 경험이 되어주지 않았나, 그렇게 생각합니다.</p>
+      <p>그리고 직업·진로를 선택하는데 있어서 돌이켜보면 30대 중반까지도 이 당시 때까지의 진로 고민은 <span class="em">"엘리트 코스" "안정적인 직업" "겉으로 좋아 보이는 직업" "폼 나보이는 직장" "한방에 자리잡기" "편안하고 널널한 직장"</span> 이런 방향이었던 것 같습니다.</p>
+      <p>그러나 지나고 보니 그런 직업과 직장은 결코 존재하지 않는 것 같습니다. 전문직이 되더라도 장단점이 있고, 그 안에서도 격차는 크고요. 대수롭지 않게 봤던 업종이 10~20년 사이에 크게 각광받고 유망해지기도 합니다. 널널하고 연봉 많은 직장에 들어가서 일할 당시는 좋았으나, 시간이 지날수록 발전이 없이 상대적으로 무능력해지면서 후회하는 경우를 많이 봤습니다.</p>
+      <blockquote>현재 화려해 보이는 직업·직장이, 여러분이 앞으로 살아갈 20~30년 미래를 담보하지 않습니다.</blockquote>
+    </div>
+  </article>
+
+  <!-- Slide 20 -->
+  <article class="slide-block" id="s20">
+    <div class="slide-img-wrap">
+      <span class="slide-num">20 / 20</span>
+      <img src="./slides/slide-20.jpg" alt="얘기 들어 줄 수 있는 친구">
+    </div>
+    <div class="slide-narration">
+      <div class="narration-label">— 마지막으로</div>
+      <p>그리고 마지막으로, 한 가지만 더 말씀드릴게요.</p>
+      <p>살면서 어려움과 복잡한 상황에 맞닥뜨리는 순간이 옵니다. 그럴 때, 술 한잔 하면서 편하게 얘기 나눌 수 있는 친구를 <span class="em">2명 이상</span> 만들어 두세요.</p>
+      <p>그 친구들에게 답을 구하려고 하기보다는 — 본인 얘기를 꺼내놓는 그 자체로 위안이 되고, 말하다 보면 스스로 정리가 되고, 결국 본인의 답을 찾게 되는 경우가 많습니다.</p>
+      <p>길게 들어 주셔서 감사합니다. 이따 뒷풀이 자리에서 더 편한 자리에서 못다 한 이야기 나누면 좋겠습니다. 감사합니다.</p>
+    </div>
+  </article>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-quote">"여기서 보내는 시간은,<br>어떤 길을 가시든 결코 헛되지 않을 겁니다."</div>
+    <div class="footer-meta">정승규 · 농화학 89학번 · 2026년 5월 7일 · 서울대학교 농업생명과학대학</div>
+  </div>
+</footer>
+
+<a href="#" class="back-to-top" id="topBtn" aria-label="맨 위로">↑</a>
+
+<script>
+  // ===== Back to top =====
+  const topBtn = document.getElementById('topBtn');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) topBtn.classList.add('visible');
+    else topBtn.classList.remove('visible');
+  });
+</script>
+
+</body>
+</html>
